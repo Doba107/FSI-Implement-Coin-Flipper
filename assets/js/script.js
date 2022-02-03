@@ -1,5 +1,5 @@
 // TODO: Declare any global variables we need
-
+var TotalAttemps, h;
 
 document.addEventListener('DOMContentLoaded', function () {
     // This is just a sanity check to make sure your JavaScript script is getting loaded
@@ -7,6 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Hi')
 
     // TODO: Add event listener and handler for flip and clear buttons
+const HeadsC = document.querySelector('#heads')
+
+const HeadsP = document.querySelector("#heads-percent")
+
+const FlipBtn = document.querySelector('#Flip')
+
+FlipBtn.addEventListener('click', function(){
+
+   if(Math.round(Math.random()) == 1){
+       TotalAttemps ++;
+       document.getElementById("heads").innerHTML ++;
+       h = (1/TotalAttemps)*100
+       document.getElementById("heads-percent").innerHTML = h%
+   }
+})
 
     // Flip Button Click Handler
         // TODO: Determine flip outcome
